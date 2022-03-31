@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 const useTimer = (ini = 0) => {
   const [time, setTime] = useState(0);
 
-  const isStart = useRef();
+  // const isStart = useRef();
   const active = useRef();
   const refInterval = useRef(0);
 
@@ -25,7 +25,7 @@ const useTimer = (ini = 0) => {
     active.current.disabled = false;
   };
 
-  const splitTimer = () => {};
+  // const splitTimer = () => {};
 
   return { time, startTimer, stopTimer, resetTimer, active };
 };

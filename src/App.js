@@ -6,7 +6,7 @@ import Timer from "./Component/Timer";
 
 function App() {
   const { time, startTimer, stopTimer, resetTimer, active } = useTimer(0);
-  const [timers, setTimers] = useState([0]);
+  const [timers] = useState([0]);
 
   return (
     <div className="App container">
