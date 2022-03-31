@@ -1,6 +1,6 @@
 :root {
-  --text-shadow-color: #ff9c99;
-  --text-main-color: #d74742;
+  --text-shadow-color: #cac7c7;
+  --text-main-color: #414141;
 }
 * {
   box-sizing: border-box;
@@ -24,8 +24,8 @@ code {
 
 h1 {
   color: var(--text-main-color);
-  font-family: "Rouge Script", cursive;
-  font-size: 130px;
+  font-family: "Rouge Script";
+  font-size: 50px;
   font-weight: normal;
   line-height: 48px;
   margin: 0 0 50px;
@@ -53,12 +53,28 @@ p {
   background-color: var(--text-shadow-color);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  height: 40vw;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 .timer__display {
+  border: 1px solid black;
+  border-radius: 25px;
+  height: 5vw;
+  width: 20vw;
   padding-left: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
-.timer__display > p {
-  font-size: 5em;
+.timer {
+  font-size: 4em;
 }
 
 .button__wrapper {
@@ -67,6 +83,18 @@ p {
   padding: 1em;
   justify-content: space-evenly;
   align-items: center;
+}
+.start-button {
+  color: white;
+  background-color: var(--text-shadow-color);
+  font-size: 2.5em;
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  border: 1px solid white;
+  padding: 1em;
+  transition: ease-in-out 0.3s;
+  text-align: center;
 }
 .button {
   color: white;
@@ -85,8 +113,20 @@ p {
   transform: scale(120%);
 }
 .button:disabled {
-  background-color: rgb(170, 164, 164);
+  background-color: rgb(177, 182, 204);
 }
+
+.start-button:active {
+  border: 1px solid var(--text-main-color);
+  background-color: var(--text-main-color);
+}
+.start-button:hover {
+  transform: scale(120%);
+}
+.start-button:disabled {
+  background-color: rgb(177, 182, 204);
+}
+
 /* .button.active {
   border: 1px solid var(--text-main-color);
   background-color: var(--text-main-color);
